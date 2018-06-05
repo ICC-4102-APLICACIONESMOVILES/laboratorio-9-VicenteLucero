@@ -2,6 +2,7 @@ package com.example.gamma.lab9;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onKeyDown(int KeyCode, KeyEvent event){
         if ((KeyCode==KeyEvent.KEYCODE_BACK) && myWebView.canGoBack()){
+            Log.d("back","baqueado");
             myWebView.goBack();
             return true;
         }
